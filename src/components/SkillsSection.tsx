@@ -95,18 +95,20 @@ const SkillsSection = () => {
             </AnimatePresence>
 
             {/* Arrows */}
-            <button
-              onClick={prev}
-              className="absolute top-1/2 -left-6 transform -translate-y-1/2 hidden group-hover:flex p-2 rounded-full bg-white/70 dark:bg-white/10 hover:bg-purple-500 transition"
-            >
-              <ChevronLeft className="text-black dark:text-white cursor-pointer" />
-            </button>
-            <button
-              onClick={next}
-              className="absolute top-1/2 -right-6 transform -translate-y-1/2 hidden group-hover:flex p-2 rounded-full bg-white/70 dark:bg-white/10 hover:bg-purple-500 transition"
-            >
-              <ChevronRight className="text-black dark:text-white cursor-pointer" />
-            </button>
+         {/* Arrows */}
+<button
+  onClick={prev}
+  className="absolute top-1/2 -left-6 transform -translate-y-1/2 p-2 rounded-full bg-white/70 dark:bg-white/10 hover:bg-purple-500 transition"
+>
+  <ChevronLeft className="text-black dark:text-white cursor-pointer" />
+</button>
+<button
+  onClick={next}
+  className="absolute top-1/2 -right-6 transform -translate-y-1/2 p-2 rounded-full bg-white/70 dark:bg-white/10 hover:bg-purple-500 transition"
+>
+  <ChevronRight className="text-black dark:text-white cursor-pointer" />
+</button>
+
           </div>
 
           {/* Right: Skill Cards with Animation */}
