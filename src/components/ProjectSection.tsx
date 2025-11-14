@@ -7,6 +7,9 @@ import bazaarhubImg from "../assets/bazaarhub.png";
 import apiappImg from "../assets/apiapp.png";
 import instagramImg from "../assets/instagram.png";
 import netflixImg from "../assets/netflixcopy.png";
+import parcelhanger from "../assets/parcel-hanger.png";
+import nexifyIndia from "../assets/nexify.png";
+import jobsBankImg from "../assets/jobs-bank.png";
 
 import portfolioImg from "../assets/portfolio.png";
 import weatherImg from "../assets/weather.png";
@@ -28,38 +31,36 @@ import dribbleImg from "../assets/dribble.png";
 
 const projectsTab1 = [
   {
-    pic: bazaarhubImg,
-    name: "Bazaarhub",
-    description: "An eCommerce platform built with MERN stack and Tailwind CSS.",
-    link: "https://ecommercemern-y3wn-dbfj8m1qv-princedigra786.vercel.app",
+    pic: nexifyIndia,
+    name: "Nexify India",
+    description:
+      "A modern brand website for a cosmetics and beauty product company. Also have admin panel.",
+    link: "https://www.nexifyindia.in/",
+  },
+  {
+    pic: parcelhanger,
+    name: "Parcel Hanger",
+    description:
+      "A package tracking web app built with MERN stack and Tailwind CSS. Also have admin panel.",
+    link: "https://www.parcel-hanger.com/",
+  },
+  {
+    pic: jobsBankImg,
+    name: "JobsBank",
+    description:
+      "A job portal web app built with MERN stack and Tailwind CSS. Also have admin panel.",
+    link: "https://global-jobs-bank.vercel.app/",
   },
   {
     pic: apiappImg,
     name: "Apiapp",
-    description: "Create user-defined APIs using a custom-built MERN stack app.",
+    description:
+      "Create user-defined APIs using a custom-built MERN stack app.",
     link: "https://apiapp-frontend-i8deug2ca-princedigra786s-projects.vercel.app/",
-  },
-  {
-    pic: instagramImg,
-    name: "Instagramclone",
-    description: "A clone of Instagram built with MERN stack and Tailwind CSS.",
-    link: "https://instagramclone-frontend.vercel.app/",
-  },
-  {
-    pic: netflixImg,
-    name: "Netflixcopy",
-    description: "A responsive Netflix clone with advanced UI and MERN stack.",
-    link: "https://netflixcopy-oas4.vercel.app/",
   },
 ];
 
-const projectsTab2 = [
-  {
-    pic: portfolioImg,
-    name: "Portfolio.com",
-    description: "My personal portfolio built with MERN stack and Tailwind CSS.",
-    link: "https://portfoliofrontend-eight.vercel.app/",
-  },
+const projectsTab3 = [
   {
     pic: weatherImg,
     name: "Weatherapp",
@@ -79,12 +80,40 @@ const projectsTab2 = [
     link: "https://dribbleintern-3p6q.vercel.app/",
   },
 ];
+const projectsTab2 = [
+  {
+    pic: instagramImg,
+    name: "Instagramclone",
+    description: "A clone of Instagram built with MERN stack and Tailwind CSS.",
+    link: "https://instagramclone-frontend.vercel.app/",
+  },
+  {
+    pic: netflixImg,
+    name: "Netflixcopy",
+    description: "A responsive Netflix clone with advanced UI and MERN stack.",
+    link: "https://netflixcopy-oas4.vercel.app/",
+  },
+  {
+    pic: bazaarhubImg,
+    name: "Bazaarhub",
+    description:
+      "An eCommerce platform built with MERN stack and Tailwind CSS.",
+    link: "https://ecommercemern-y3wn-dbfj8m1qv-princedigra786.vercel.app",
+  },
+  {
+    pic: portfolioImg,
+    name: "Portfolio.com",
+    description:
+      "My personal portfolio built with MERN stack and Tailwind CSS.",
+    link: "https://portfoliofrontend-eight.vercel.app/",
+  },
+];
 
 export default function Projects() {
   const [tab, setTab] = useState("1");
 
   const selectedProjects =
-    tab === "1" ? projectsTab1 : tab === "2" ? projectsTab2 : [];
+    tab === "1" ? projectsTab1 : tab === "2" ? projectsTab2 : projectsTab3;
 
   return (
     <div className="px-6 py-12 max-w-7xl mx-auto min-h-screen" id="projects">
@@ -103,21 +132,19 @@ export default function Projects() {
               tab === t
                 ? "bg-purple-600 text-white shadow-md scale-105"
                 : "bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
-            }`}
-          >
+            }`}>
             Tab {t}
           </button>
         ))}
       </div>
 
       {/* Content */}
-      {tab === "3" ? (
+      {tab === "4" ? (
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-gray-700 dark:text-gray-200 font-extrabold text-3xl text-center mt-20"
-        >
+          className="text-gray-700 dark:text-gray-200 font-extrabold text-3xl text-center mt-20">
           Developer is still working on it 🚧
         </motion.h1>
       ) : (
@@ -129,12 +156,11 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
               custom={index}
-            //   variants={cardVariants}
+              //   variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="relative group rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
+              className="relative group rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img
                 src={project.pic}
                 alt={project.name}
@@ -142,7 +168,9 @@ export default function Projects() {
               />
               <div className="absolute inset-0 bg-black/60 dark:bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-6">
                 <h3 className="text-2xl font-bold">{project.name}</h3>
-                <p className="text-sm mt-2 text-center">{project.description}</p>
+                <p className="text-sm mt-2 text-center">
+                  {project.description}
+                </p>
               </div>
             </motion.a>
           ))}
