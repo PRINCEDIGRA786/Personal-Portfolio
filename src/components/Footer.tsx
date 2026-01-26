@@ -14,27 +14,23 @@ export default function Footer() {
             href="https://github.com/princedigra786"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-purple-600 transition-colors"
-          >
+            className="hover:text-purple-600 transition-colors">
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/princedigra"
+            href="https://www.linkedin.com/in/prince-368909285/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-purple-600 transition-colors"
-          >
+            className="hover:text-purple-600 transition-colors">
             <FaLinkedin />
           </a>
           <a
-  href="mailto:digraprince7@gmail.com?subject=Hello%20Prince&body=I%20found%20your%20portfolio%20interesting!"
-  className="hover:text-purple-600 transition-colors"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <FaEnvelope />
-</a>
-
+            href="mailto:digraprince7@gmail.com?subject=Hello%20Prince&body=I%20found%20your%20portfolio%20interesting!"
+            className="hover:text-purple-600 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer">
+            <FaEnvelope />
+          </a>
         </div>
       </div>
     </footer>
