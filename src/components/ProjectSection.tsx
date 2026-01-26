@@ -15,19 +15,7 @@ import portfolioImg from "../assets/portfolio.png";
 import weatherImg from "../assets/weather.png";
 import chatgptImg from "../assets/chatgpt.png";
 import dribbleImg from "../assets/dribble.png";
-
-// const cardVariants = {
-//   hidden: { opacity: 0, y: 30 },
-//   visible: (i: number) => ({
-//     opacity: 1,
-//     y: 0,
-//     transition: {
-//       delay: i * 0.15,
-//       duration: 0.6,
-//       ease: [0.42, 0, 1, 1], // easeOut cubic-bezier
-//     },
-//   }),
-// };
+import hairSkinLuxe from "../assets/hair-skin-luxe.png";
 
 const projectsTab1 = [
   {
@@ -52,15 +40,22 @@ const projectsTab1 = [
     link: "https://global-jobs-bank.vercel.app/",
   },
   {
+    pic: hairSkinLuxe,
+    name: "Hair Skin Luxe",
+    description:
+      "A modern brand website for a hair and skin care product company.",
+    link: "https://www.hairskinluxe.com/",
+  },
+];
+
+const projectsTab3 = [
+  {
     pic: apiappImg,
     name: "Apiapp",
     description:
       "Create user-defined APIs using a custom-built MERN stack app.",
     link: "https://apiapp-frontend-i8deug2ca-princedigra786s-projects.vercel.app/",
   },
-];
-
-const projectsTab3 = [
   {
     pic: weatherImg,
     name: "Weatherapp",
