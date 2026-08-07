@@ -30,7 +30,7 @@ const projectsTab1 = [
     name: "Parcel Hanger",
     description:
       "A package tracking web app built with MERN stack and Tailwind CSS. Also have admin panel.",
-    link: "https://www.parcel-hanger.com/",
+    link: "https://www.info-parcel-hanger.com/",
   },
   {
     pic: jobsBankImg,
